@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link  href="assets/stylesheets/style.css" rel='stylesheet'>
+    <link  href="assets/stylesheets/Date.css" rel='stylesheet'>
+    <link  href="assets/javascripts/phon.js" rel='stylesheet' >
+    <title>Employee</title>
+  </head>
+  <body>
+    <div class="form-HN">
+        <input type="submit" class="w3-bar-item w3-button w3-dark-grey"   value="IDพักงาน:">
+       
+        <input type="text" id="rand">
+    </div>
+    <form>
+        <div class="container">
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">ชาย</label>
+                </div>
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">หญิง</label>
+                </div>
+               
+            <div class="form-rowname">
+                    <div class="col">
+                        <label for="inputEmail4">ชื่อ</label>
+                         <input type="text" class="control" id="inputEmail4" placeholder="ชื่อ">
+                    </div>
+                     <div class="col">
+                         <label for="inputEmail4">สุกล</label>
+                         <input type="text" class="control" id="inputEmail4" placeholder="สกุล">
+                     </div>
+          
+             </div>
+             <div class="form-rowname">
+                    <div class="col">
+                        <label for="inputEmail4">เลขบัตรประชาชน</label>
+                         <input type="text" class="control" id="inputEmail4" placeholder="เลขบัตรประชาชน">
+                     </div>
+             <div class="img">
+                    <img id="blah" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt="your image" >
+                    <input type='file' onchange="readURL(this);" />
+             </div>
+        </div>
+    </form>
+    <form action="/action_page.php">
+        <div class="Data">
+                <label for="dateofbirth">วันเดือนปีเกิด</label>
+                <input type="date" name="dateofbirth" id="dateofbirth">
+        </div>
+        <div class="container">
+                <div class="form-rowname1">
+                     <div class="col">
+                        <label for="inputEmail4">ตำแหน่ง</label>
+                        <input type="text" class="control" id="inputEmail4" placeholder="ตำแหน่ง">
+                     </div>
+                    <div class="col">
+                         <label for="inputEmail4">แผนก</label>
+                         <input type="text" class="control" id="inputEmail4" placeholder="แผนก">
+                    </div>
+                </div>
+        </div>
+        <div class="form-rowname4">
+                <div class="col">
+                   <label for="inputEmail4">ที่อยู่</label>
+                   <input type="text" class="control" id="inputEmail4" placeholder="ที่อยู่">
+                </div>
+               <div class="col">
+                    <label for="inputEmail4">ซอย</label>
+                    <input type="text" class="control" id="inputEmail4" placeholder="ซอย">
+               </div>
+               <div class="col">
+                    <label for="inputEmail4">บ้าน</label>
+                    <input type="text" class="control" id="inputEmail4" placeholder="บ้าน">
+               </div>
+               <div class="col">
+                    <label for="inputEmail4">ตำบล</label>
+                    <input type="text" class="control" id="inputEmail4" placeholder="ตำบล">
+               </div>
+           </div>
+           <div class="form-rowname5">
+                <div class="col">
+                   <label for="inputEmail4">จังหวัด</label>
+                   <input type="text" class="control" id="inputEmail4" placeholder="จังหวัด">
+                </div>
+           </div>
+        <div class="form-rowname2">
+            <div class="col">
+                <label for="exampleFormControlTextarea1">ประวัติการทำงาน</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                <div class="form-phon">
+                        <div class="col">
+                            <label for="inputEmail4">หมายเลขโทรศัพท์</label>
+                            <input type="text" class="control" id="inputEmail4" placeholder="+66">
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </form>
+      <form >
+        <div class="form-put">
+            <input class="chack" type="checkbox" name="vehicle" value="Bike" >ยืนยันข้อมูลถูกต้อง<br>
+            <p> </p>
+            <input  type="submit" class="w3-bar-item w3-button w3-dark-grey" value="ตกลง">
+        </div>
+      </form>
+     
+           
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+          
+    <script src="assets/javascripts/phon.js"></script>
+
+</body>
+</html>
