@@ -19,10 +19,6 @@ public class HomeController extends Controller {
     public Result check(){
         return ok(views.html.check.render());
     }
-
-    public Result index() {
-        return ok(index.render("Your new application is ready."));
-    }
     public Result MedicalData(){
         return ok(views.html.MedicalData.render());
     }
