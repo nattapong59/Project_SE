@@ -16,6 +16,7 @@ public class HomeController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>.
      */
+<<<<<<< HEAD
     public Result main() {
         return ok(views.html.main.render());
     }
@@ -30,3 +31,19 @@ public class HomeController extends Controller {
         return ok(views.html.check.render());
     }
 }
+=======
+    public Result index() {
+        return ok(index.render("Your new application is ready."));
+    }
+    public Result MedicalData(){
+        return ok(views.html.MedicalData.render());
+    }
+    public Result Employee(){
+        return ok(views.html.Employee.render());
+    }
+    
+
+}
+
+
+>>>>>>> c1ae5811d6f85c87b86f877326f884c8b9ad24f7
