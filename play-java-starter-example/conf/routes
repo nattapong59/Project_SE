@@ -4,28 +4,22 @@
 
 # An example controller showing a sample home page
 
+# user path
 GET     /                           controllers.HomeController.main()
 GET     /rules                      controllers.HomeController.rules()
 GET     /booking                    controllers.HomeController.booking()
-GET     /test                       controllers.HomeController.test()
 GET     /check                      controllers.HomeController.check()
 
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
+
+# admin path
+GET     /payment                    controllers.HomeController.payment()
+GET     /managementroom             controllers.HomeController.management_room()
+GET     /medical_data               controllers.HomeController.medical_data()
+GET     /employee                   controllers.HomeController.management_employee()
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
-<<<<<<< HEAD:conf/routes
 
-GET     /Managementroom                           controllers.HomeController.MMM
-=======
-GET     /MedicalData                 controllers.HomeController.MedicalData
-GET     /Employee                    controllers.HomeController.Employee
-<<<<<<< HEAD
-=======
->>>>>>> c1ae5811d6f85c87b86f877326f884c8b9ad24f7
->>>>>>> ea15276e847733b3a30b7fc60d7a8a4142cee6b4:play-java-starter-example/conf/routes
->>>>>>> 598488998acad0ab6dcf1d5e1021e49826306498
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 

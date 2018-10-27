@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\PT_Kittisak\IdeaProjects\Project_SE\app\views\On.scala.html:4:96: not found: value example[0m
-[0m[[0m[31merror[0m] [0m[0m      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
