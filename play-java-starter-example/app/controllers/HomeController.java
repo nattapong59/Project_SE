@@ -27,4 +27,7 @@ public class HomeController extends Controller {
     public Result Employee(){
         return ok(views.html.Employee.render());
     }
+    public Result MMM() {
+        return ok(views.html.Managementroom.render());
+   }
 }
