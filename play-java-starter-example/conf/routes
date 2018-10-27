@@ -3,23 +3,20 @@
 # ~~~~
 
 # An example controller showing a sample home page
-<<<<<<< HEAD
+
 GET     /                           controllers.HomeController.main()
+GET     /rules                      controllers.HomeController.rules()
 GET     /booking                    controllers.HomeController.booking()
 GET     /test                       controllers.HomeController.test()
 GET     /check                      controllers.HomeController.check()
 
-
-
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
-=======
-GET     /                           controllers.HomeController.index
+
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 GET     /MedicalData                 controllers.HomeController.MedicalData
 GET     /Employee                    controllers.HomeController.Employee
->>>>>>> c1ae5811d6f85c87b86f877326f884c8b9ad24f7
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
