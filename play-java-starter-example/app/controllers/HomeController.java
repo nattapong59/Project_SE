@@ -30,4 +30,6 @@ public class HomeController extends Controller {
    public Result payment(){
        return ok(views.html.payment.render());
    }
+
+
 }

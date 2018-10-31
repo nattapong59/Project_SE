@@ -11,9 +11,10 @@ GET     /booking                    controllers.HomeController.booking()
 GET     /check                      controllers.HomeController.check()
 
 
+
 # admin path
 GET     /payment                    controllers.HomeController.payment()
-GET     /managementroom             controllers.HomeController.management_room()
+GET     /management_room             controllers.HomeController.management_room()
 GET     /medical_data               controllers.HomeController.medical_data()
 GET     /employee                   controllers.HomeController.management_employee()
 

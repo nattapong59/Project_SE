@@ -1,66 +1,141 @@
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link href="assets/stylesheets/Bos.css" rel="stylesheet">
-    <title>Hello, world!</title>
-</head>
-<body>
-   <form class = "body">
-<h1>Hospital beds resrtvaion| System</h1>
-
-<div class ="from-type">
-    <p>เลือกประเภทอาคาร</p> 
-        <select name=" building">
-          <option value=" building1">อาคาร1</option>
-          <option value="  building2">อาคาร2</option>
-          <option value="building3" >อาคาร3</option>
-          <option value="building4">อาคาร4</option>
-        </select>
-        
-</div>
-
-<button style = "background-image:url(assets/images/img.png)" class="button5"> </button>
-
-
-    <div class="status">
-        <p>แสดงสถานะ</p> <input type="radio" name="vehicle" value="free"> ว่าง<br>
-                      <input type="radio" name="vehicle" value="Maintenance">ซ่อมบำรุง<br>
-                      <input type="radio" name="vehicle" value="busy"> ไม่ว่าง<br>
-                      <input type="radio" name="vehicle" value="Was booked">ถูกจอง<br>
-                      <div class="form-row00">
-                      <textarea rows="5" cols="60"> </textarea><br>
-                      </div>
-                      <div class = "form-row01">
-                        <input type="submit" class = "form-row"value="ตกลง"style="width:60px;height:30px"><br>
-                        <div class = "from-row02">
-                            <input type="submit" class = "form-row"value="ยกเลิก"></div>
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>จองห้องพัก</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/assets/stylesheets/responsee.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.carousel.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.theme.css">
+      <link rel="stylesheet" href="/assets/stylesheets/Bos.css">
+      <link rel="stylesheet" href="/assets/stylesheets/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <!-- CUSTOM STYLE -->  
+      <script type="text/javascript" src="/assets/javascripts/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="/assets/javascripts/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="/assets/javascripts/responsee.js"></script>   
+   </head>
+    <body class="size-1140">
+      <!-- TOP NAV WITH LOGO -->  
+      <header>
+            <nav>
+                    <div class="line">
+                       <div class="top-nav">              
+                          <div class="logo hide-l">
+                            <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                          </div>                  
+                          <p class="nav-text"><i class="fa fa-bars" style="font-size:23px;color:rgb(248, 244, 244);"></i></p>
+                          <ul class="s-12 l-2">
+                            <li class="logo hide-s hide-m">
+                               <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                            </li>
+                         </ul>
+                          <div class="top-nav s-12 l-5">
+                             <ul class="top-ul chevron">
+                                <li><a href="../design/"style="font-size: 17px"><i class="fa fa-hotel" style="font-size:21px; color:#fff;"></i> จองห้องพัก</a>
+                                </li>
+                                <li><a href="../design/product.html"style="font-size: 17px"><i class="fa fa-calendar" style="font-size:21px; color:#fff;"></i> ตรวจสอบการจอง</a>
+                                </li>
+                                <li><a href="../design/services.html" style="font-size: 17px"><i class="fa fa-gavel" style="font-size:21px; color:#fff;"></i> ระเบียบ</a>
+                                </li>
+                             </ul>
+      
+                             <ul class="top-ul chevron right">
+                              <li><a href="../design/contact.html" style="font-size: 17px;"><i class="fa fa-user-md " style="font-size:21px; color:#fff;"></i> ผู้ดูแลระบบ</a>
+                              </li>
+                           </ul> 
+      
+      
                           </div>
+      
+                       </div>
+                    </div>
+                 </nav>
+      </header>
+      <section>
+         <div id="head">
+            <div class="line">
+              <div class="container">
+                <form class = "body">
+         <div class ="from-type">
+                        <p>เลือกประเภทอาคาร</p> 
+                            <select name=" building">
+                              <option value=" building1">อาคาร1</option>
+                              <option value="  building2">อาคาร2</option>
+                              <option value="building3" >อาคาร3</option>
+                              <option value="building4">อาคาร4</option>
+                            </select>
+                            
+          </div>
+                    <div class = add>
+                    <button  style = "background-image:url(assets/images/img.png);border-radius: 50%;
+                    width: 50px;
+                    height: 50px; " class="button5" > </button>
+                    <button style = "background-image:url(assets/images/add-1-icon.png);border-radius: 50%;
+                    width: 50px;
+                    height: 50px;" class="button6"> </button>
+                     <button style = "background-image:url(assets/images/images.jpg);border-radius: 50%;
+                     width: 50px;
+                     height: 50px;" class="button7"> </button>
+                        </div>
 
-    
-               
-    </div>
-    <button class="button">101</button><button class="button">102</button><button class="button">103</button><button class="button">104</button><button class="button">105</button><br>
-    <button class="button">201</button><button class="button">202</button><button class="button">203</button><button class="button">204</button><button class="button">205</button><br>
-    <button  class="button">301</button><button class="button">302</button><button class="button">303</button><button  class="button">304</button><button class="button">305</button><br>
-    <button  class="button">401</button><button class="button">402</button><button class="button">403</button><button  class="button">404</button><button class="button">405</button><br>
-    <button class="button">501</button><button class="button">502</button><button class="button">503</button><button class="button">504</button><button class="button">505</button>
-  
-</form>
 
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-
-
-
+                    
+                    
+                        <div class="status">
+                            <p>แสดงสถานะ</p> <input type="radio" name="vehicle" value="free"> ว่าง<br>
+                                          <input type="radio" name="vehicle" value="Maintenance">ซ่อมบำรุง<br>
+                                          <input type="radio" name="vehicle" value="busy"> ไม่ว่าง<br>
+                                          <input type="radio" name="vehicle" value="Was booked">ถูกจอง<br>
+                                          
+                                          
+                             </div>       
+                             <div class="form-row00">
+                                <textarea rows="6" cols="50 "> </textarea><br>
+                                </div>     
+                             <div class = "form-row01">
+                                            <input type="submit" class = "form-row01"value="ตกลง"style="width:60px;height:30px"><br>
+                                            
+                                              </div>     
+                                              <div class = "from-row02">
+                                                <input type="submit" class = "form-row02"value="ยกเลิก" style="width:60px;height:30px">
+                                            </div>
+                         
+                             <div class = "button00">
+                        <button class="button" style="width:80px;height:50px">101</button><button class="button" style="width:80px;height:50px">102</button><button class="button" style="width:80px;height:50px">103</button><button class="button" style="width:80px;height:50px">104</button><button class="button" style="width:80px;height:50px">105</button><br>
+                        <button class="button" style="width:80px;height:50px">201</button><button class="button" style="width:80px;height:50px">202</button><button class="button" style="width:80px;height:50px">203</button><button class="button" style="width:80px;height:50px">204</button><button class="button" style="width:80px;height:50px">205</button><br>
+                        <button  class="button" style="width:80px;height:50px">301</button><button class="button" style="width:80px;height:50px">302</button><button class="button" style="width:80px;height:50px">303</button><button  class="button" style="width:80px;height:50px">304</button><button class="button" style="width:80px;height:50px">305</button><br>
+                        <button  class="button" style="width:80px;height:50px">401</button><button class="button" style="width:80px;height:50px">402</button><button class="button" style="width:80px;height:50px">403</button><button  class="button" style="width:80px;height:50px">404</button><button class="button" style="width:80px;height:50px">405</button><br>
+                        <button class="button" style="width:80px;height:50px">501</button><button class="button" style="width:80px;height:50px">502</button><button class="button" style="width:80px;height:50px">503</button><button class="button" style="width:80px;height:50px">504</button><button class="button" style="width:80px;height:50px">505</button>
+                      
+                             </div>
+                    </form>
+                    
+                    
+                    <!-- Optional JavaScript -->
+                    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+              </div>
+            </div>
+         </div>
+      </section>
+      <!-- FOOTER -->   
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Copyright 2015, Vision Design - graphic zoo
+               </p>
+            </div>
+            <div class="s-12 l-6">
+               <p class="right">
+                  <a class="right" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding by Responsee Team</a>
+               </p>
+            </div>
+         </div>
+      </footer> 
+   </body>
 </html>
