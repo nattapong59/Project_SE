@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    width: 0 auto;
+
+}
+
+.container{
+    background-color: #fff;
+    padding: 7px;
+    width: 64%;
+    margin: -38px auto;
+}
+.button{
+    margin: 0;
+    width: 150;
+    height: 60;
+    margin-top: 4px;
+    margin-right: -44px;
+    margin-left: 47px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.form-row00{
+    margin-top: -118px;
+    margin-left: 94px;
+
+
+}
+.form-row01{
+    margin-top: -92px;
+    margin-left: 261px;
+
+}
+.from-row02{
+    margin-top: 5px;
+    margin-left: 522px;
+
+}
+.from-type{
+
+    margin-top: -50px;
+    margin-left: 12px;
+
+}
+.status{
+    margin-top: 21px;
+    margin-left: 14px;
+    
+}
+.button5 {   border-radius: 50%;
+    width: 50;
+    height: 50;
+    margin-left: 109px;
+    margin-top: -35px;
+}
+
+.button6{
+           border-radius: 50%;
+            width: 50;
+            height: 50;
+}
+
+.button7{
+        border-radius: 50%;
+         width: 50;
+         height: 50;
+ }
+ 
+.add{margin-left: 14px;
+    margin-top: -35px;}
+
+    .button00{
+        margin-top: 46px;
+        margin-left: -33px;
+    }
+
+.body{
+    width: 650;
+    margin: 50px auto;
+  
+
+}
