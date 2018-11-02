@@ -9,13 +9,13 @@ GET     /                           controllers.HomeController.main()
 GET     /rules                      controllers.HomeController.rules()
 GET     /booking                    controllers.HomeController.booking()
 GET     /check                      controllers.HomeController.check()
-
+GET     /test                           controllers.HomeController.test()
 
 # admin path
 GET     /payment                    controllers.HomeController.payment()
-GET     /managementroom             controllers.HomeController.management_room()
+GET     /management_room             controllers.HomeController.management_room()
 GET     /medical_data               controllers.HomeController.medical_data()
-GET     /employee                   controllers.HomeController.management_employee()
+GET     /management_employee                   controllers.HomeController.management_employee()
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count

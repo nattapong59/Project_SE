@@ -88,10 +88,10 @@ footer p, footer a:link, footer a:visited, footer a:hover {
 }
 .carousel-text {
 	display: block;
-	position: absolute;
+	position: relative;
 	top: 30%;
 	width: 100%;
-	z-index: 999;
+	z-index: 1;
 }
 
 .carousel-btm{

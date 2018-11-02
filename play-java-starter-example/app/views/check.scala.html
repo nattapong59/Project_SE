@@ -23,43 +23,64 @@
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
       <![endif]-->
    </head>
-   <body class="size-1140">
-      <!-- TOP NAV WITH LOGO -->  
-      <header>
-            <nav>
-                    <div class="line">
-                       <div class="top-nav">              
-                          <div class="logo hide-l">
-                            <a href="../design/"><strong>Hospital's</strong><br/>Reservation</a>
-                          </div>                  
-                          <p class="nav-text"><i class="fa fa-bars" style="font-size:23px;color:#fff;"></i></p>
-                          <ul class="s-12 l-2">
-                            <li class="logo hide-s hide-m">
-                               <a href="../design/"><strong>Hospital's</strong><br/>Reservation</a>
-                            </li>
-                         </ul>
-                          <div class="top-nav s-12 l-5">
-                             <ul class="top-ul chevron">
-                                <li><a href="../design/"style="font-size: 17px"><i class="fa fa-hotel" style="font-size:21px; color:#fff;"></i> จองห้องพัก</a>
-                                </li>
-                                <li><a href="../design/product.html"style="font-size: 17px"><i class="fa fa-calendar" style="font-size:21px; color:#fff;"></i> ตรวจสอบการจอง</a>
-                                </li>
-                                <li><a href="../design/services.html" style="font-size: 17px"><i class="fa fa-gavel" style="font-size:21px; color:#fff;"></i> ระเบียบ</a>
-                                </li>
-                             </ul>
-      
-                             <ul class="top-ul chevron right">
-                              <li><a href="../design/contact.html" style="font-size: 17px;"><i class="fa fa-user-md " style="font-size:21px; color:#fff;"></i> ผู้ดูแลระบบ</a>
-                              </li>
-                           </ul> 
-      
-      
-                          </div>
-      
-                       </div>
+  <body class="size-1140">
+    <header>
+      <nav>
+              <div class="line">
+                 <div class="top-nav">              
+                    <div class="logo hide-l">
+                      <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                    </div>                  
+                    <p class="nav-text"><i class="fa fa-bars" style="font-size:23px;color:#fff;"></i></p>
+                    <ul class="s-12 l-2">
+                      <li class="logo hide-s hide-m">
+                         <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                      </li>
+                   </ul>
+                    <div class="top-nav s-12 l-5">
+                      <ul class="top-ul chevron">
+                        <li><a href="http://localhost:9000/booking"style="font-size: 17px"><i class="fa fa-hotel" style="font-size:21px; color:#fff;"></i> จองห้องพัก</a>
+                        </li>
+                        <li><a href="http://localhost:9000/check"style="font-size: 17px"><i class="fa fa-calendar" style="font-size:21px; color:#fff;"></i> ตรวจสอบการจอง</a>
+                        </li>
+                        <li><a href="http://localhost:9000/rules" style="font-size: 17px"><i class="fa fa-gavel" style="font-size:21px; color:#fff;"></i> ระเบียบ</a>
+                        </li>
+                     </ul>
+
+
+                       <ul class="top-ul chevron right">
+                        <li><a onclick="document.getElementById('modal-wrapper').style.display='block'" style="font-size: 17px;"><i class="fa fa-user-md " style="font-size:21px; color:#fff;"></i> ผู้ดูแลระบบ</a>
+                        </li>
+                     </ul> 
+
+
                     </div>
-                 </nav>
-      </header>
+
+                 </div>
+              </div>
+           </nav>
+    </header>
+    <div id="modal-wrapper" class="modal">
+  
+      <form class="modal-content animate" action="/action_page.php">
+            
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+          <img src="/assets/images/login.png"  alt="Avatar" class="avatar">
+          <h3 style="text-align:center">เฉพาะผู้ดูแลระบบ</h3>
+        </div>
+    
+        <div>
+          <input class="user-text" style="width: 90%" type="" placeholder="Username" name="uname">
+          <input style="width: 90%" type="password" placeholder="Password" name="psw">        
+          <button type="submit">เข้าสู่ระบบ</button>
+          <input type="checkbox" style="margin-left: 20px;margin-top:10px;"> Remember me      
+          <a href="#" style="text-decoration:none; float:right; margin-right:20px; margin-top:5px;color: blue">Forgot Password?</a>
+        </div>
+        
+      </form>
+      
+    </div>
       <section>
          <div id="head">
             <div class="line">
@@ -112,6 +133,17 @@
                </p>
             </div>
          </div>
-      </footer> 
+      </footer>
+      <script>
+        // If user clicks anywhere outside of the modal, Modal will close
+        
+        var modal = document.getElementById('modal-wrapper');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>       
+      
    </body>
 </html>

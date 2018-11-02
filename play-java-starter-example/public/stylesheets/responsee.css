@@ -10,6 +10,93 @@
 	box-sizing:border-box;
 	margin:0;	
 }
+/* Full-width input fields */
+.user-text{
+  padding: 10px 20px;
+  margin: 5px 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size:16px;
+  border-radius: 5px;
+}
+
+input[type=text], input[type=password] {
+    padding: 10px 20px;
+    margin: 5px 18px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size:16px;
+    border-radius: 5px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: rgb(0, 30, 34);
+    color: white;
+    padding: 14px 20px;
+    margin: 5px 18px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size:20px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #2fcbe0;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.avatar {
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 400px; 
+    padding-bottom: 30px;
+    
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
 
 i, .icon {
   font-family: 'mfg';
@@ -82,13 +169,7 @@ a, a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
   color:#444;
 	}
-img {
-  border:0;
-  display:block;
-	height:auto;
-	max-width:100%;
-  width:auto;
-	}
+
 .owl-item img, .full-img {
   max-width: none;
 	width:100%;
@@ -346,6 +427,7 @@ ul.chevron .submenu > a:after, ul.chevron .sub-submenu > a:after,ul.chevron .asi
 .hide-l {display:block;}
 .hide-s {display:block;}
 .hide-m {display:none;}
+.modal-content {width: 60%;}
 nav {
   display:block;
   cursor:pointer;
@@ -528,6 +610,7 @@ nav {
 .s-10 {width:83.3333%;}
 .s-11 {width:90%;}
 .s-12 {width:100%}
+.modal-content {width: 90%;}
 }  
 .center {
   float:none;

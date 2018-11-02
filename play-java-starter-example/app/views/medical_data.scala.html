@@ -1,148 +1,200 @@
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>จองห้องพัก</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/assets/stylesheets/responsee.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.carousel.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.theme.css">
+      <link rel="stylesheet" href="/assets/stylesheets/employee.css">
+      <!-- CUSTOM STYLE -->  
+      <link rel="stylesheet" href="/assets/stylesheets/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="/assets/javascripts/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="/assets/javascripts/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="/assets/javascripts/responsee.js"></script>   
+   </head>
+   <body class="size-1140">
+    <header>
+      <nav>
+              <div class="line">
+                 <div class="top-nav">              
+                    <div class="logo hide-l">
+                      <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                    </div>                  
+                    <p class="nav-text"><i class="fa fa-bars" style="font-size:23px;color:#fff;"></i></p>
+                    <ul class="s-12 l-2">
+                      <li class="logo hide-s hide-m">
+                         <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                      </li>
+                   </ul>
+                    <div class="top-nav s-12 l-5">
+                       <ul class="top-ul chevron">
+                          <li><a href="http://localhost:9000/management_room" style="font-size: 17px"><i class="fa fa-hospital-o" style="font-size:21px; color:#fff;"></i> จัดการข้อมูลห้องพัก</a>
+                          </li>
+                          <li><a href="http://localhost:9000/medical_data" style="font-size: 17px"><i class="fa fa-drivers-license" style="font-size:21px; color:#fff;"></i> จัดการข้อมูลเวชระเบียน</a>
+                          </li>
+                          <li><a href="http://localhost:9000/payment" style="font-size: 17px"><i class="fa fa-usd" style="font-size:21px; color:#fff;"></i> รับชำระเงิน</a>
+                          </li>
+                       </ul>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                       <ul class="top-ul chevron right">
+                        <li><a href="http://localhost:9000/" style="font-size: 17px;"><i class="fa fa-user-md " style="font-size:21px; color:#fff;"></i> ออกจากระบบ</a>
+                        </li>
+                     </ul> 
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link  href="assets/stylesheets/style.css" rel='stylesheet'>
-    <link  href="assets/stylesheets/Date.css" rel='stylesheet'>
-    <link  href="assets/javascripts/phon.js" rel='stylesheet' >
-    <title>MedicalData</title>
-  </head>
-  <body>
-    <div class="form-HN">
-        <input type="submit" class="w3-bar-item w3-button w3-dark-grey"   value="รหัสHN:">
-       
-        <input type="text" id="rand">
-    </div>
-    <form>
-        <div class="container">
-                <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">ชาย</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">หญิง</label>
-                </div>
-              
-            <div class="form-rowname">
-                    <div class="col">
-                        <label for="inputEmail4">ชื่อ</label>
-                         <input type="text" class="control" id="inputEmail4" placeholder="ชื่อ">
                     </div>
-                     <div class="col">
-                         <label for="inputEmail4">สุกล</label>
-                         <input type="text" class="control" id="inputEmail4" placeholder="สกุล">
-                     </div>
-          
-             </div>
-             <div class="form-rowname">
-                    <div class="col">
-                        <label for="inputEmail4">เลขบัตรประชาชน</label>
-                         <input type="text" class="control" id="inputEmail4" placeholder="เลขบัตรประชาชน">
-                     </div>
-             <div class="img">
-                    <img id="blah" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt="your image" >
-                    <input type='file' onchange="readURL(this);" />
-             </div>
-        </div>
-   
-        <div class="Data">
-                <label for="dateofbirth">วันเดือนปีเกิด</label>
-                <input type="date" name="dateofbirth" id="dateofbirth">
-        </div>
-        <div class="container">
-                <div class="form-rowname1">
-                     <div class="col">
-                        <label for="inputEmail4">เชื่อชาติ</label>
-                        <input type="text" class="control" id="inputEmail4" placeholder="เชื่อชาติ">
-                     </div>
-                    <div class="col">
-                         <label for="inputEmail4">สัญชาติ</label>
-                         <input type="text" class="control" id="inputEmail4" placeholder="สัญชาติ">
-                    </div>
-                    <div class="col">
-                        <label for="inputEmail4">ศาสนา</label>
-                        <input type="text" class="control" id="inputEmail4" placeholder="ศาสนา">
-                    </div>
-                    <div class="col">
-                        <label for="inputState">หมู่เลือด</label>
-                        <select id="inputState" class="form-control">...</option>
-                            <option>A</option>
-                            <option>B</option>
-                            <option>AB</option>
-                            <option>O</option>
-                        </select> 
-                    </div>       
-                </div>             
-        </div>
-        <div class="form-rowname5">
-            <div class="col">
-               <label for="inputEmail4">อาชีพ</label>
-               <input type="text" class="control" id="inputEmail4" placeholder="อาชีพ">
-            </div>
-            
-       </div>
-        <div class="form-rowname4">
-                <div class="col">
-                   <label for="inputEmail4">ที่อยู่</label>
-                   <input type="text" class="control" id="inputEmail4" placeholder="ที่อยู่">
-                </div>
-               <div class="col">
-                    <label for="inputEmail4">ซอย</label>
-                    <input type="text" class="control" id="inputEmail4" placeholder="ซอย">
-               </div>
-               <div class="col">
-                    <label for="inputEmail4">บ้าน</label>
-                    <input type="text" class="control" id="inputEmail4" placeholder="บ้าน">
-               </div>
-               <div class="col">
-                    <label for="inputEmail4">ตำบล</label>
-                    <input type="text" class="control" id="inputEmail4" placeholder="ตำบล">
-               </div>
-           </div>
-           <div class="form-rowname5">
-                <div class="col">
-                   <label for="inputEmail4">จังหวัด</label>
-                   <input type="text" class="control" id="inputEmail4" placeholder="จังหวัด">
-                </div>
-           </div>
-        <div class="form-rowname2">
-            <div class="col">
-                <label for="exampleFormControlTextarea1">ประวัติการรักษา</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                <div class="form-phon">
-                        <div class="col">
-                            <label for="inputEmail4">หมายเลขโทรศัพท์</label>
-                            <input type="text" class="control" id="inputEmail4" placeholder="+66">
+
+                 </div>
+              </div>
+           </nav>
+      </header>
+      
+      <section>
+         <div id="head">
+            <div class="line">
+              <div class="container">
+                  <a class="center" style="font-size: 26px;">จัดการข้อมูลเวชระเบียน</a>
+                  <br>
+                      <form>
+                        <div>
+                            <div class="img">
+                                <img  id="blah" src="/assets/images/user_photo.jpg" alt="your image" ><br>
+                                <input  type='file' onchange="readURL(this);" />
+                            </div>
+                          <div class="idem">
+                            <label for="idemployee">รหัสHN : </label>
+                            <input class="box-only" type="text" id="idemployee">
+                          </div>
+                        </div>
+
+                          <div >
+                            <label for="name">ชื่อ-สกุล:</label><br>
+                            <input  class="box-double" type="text" id="name" placeholder="ชื่อ">
+                            <input  class="box-double" type="text" id="name" placeholder="นามสกุล">
+                          </div>
+                          <div>
+                            <label>เลขบัตรประชาชน:</label><br>
+                            <input class="box-only"  type="text" id="inputEmail4" placeholder="เลขบัตรประชาชน">
+                          </div>
+                        
+
+                          <div class="form-rowname1">
+                            <div class="col">
+                              <label for="inlineRadio1">เพศ:</label><br> 
+                              <input style="margin-left: 20px;" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"><a style="font-size: 16px;"> :ชาย</a><br>
+                              <input style="margin-left: 20px;" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"><a style="font-size: 16px;"> :หญิง</a>
+                            </div>
+
+                            <div class="col" style="margin-left: 50px">
+                              <label for="dateofbirth">วันเดือนปีเกิด:</label><br>
+                              <input type="date" name="dateofbirth" id="dateofbirth">  
+                            </div>
+                            <div class="col tab-10">
+                                <label for="inputEmail4">เชื่อชาติ:</label><br>
+                                <input style="width: 100px;" type="text"  id="inputEmail4" placeholder="เชื่อชาติ">
+                             </div>
+                            <div class="col tab-10-1">
+                                 <label for="inputEmail4">สัญชาตฺ:</label><br>
+                                 <input style="width: 100px;" type="text"  id="inputEmail4" placeholder="สัญชาตฺ">
+                            </div>
+                            <div class="col tab-10-1">
+                                <label for="inputEmail4">ศาสนา:</label><br>
+                                <input style="width: 100px;" type="text"  id="inputEmail4" placeholder="ศาสนา">
+                            </div>
+                            <div class="col tab-10-1">
+                                <label for="inputEmail4">หมู่เลือด:</label><br>
+                                <select id="inputState" class="form-control">...</option>
+                                  <option>A</option>
+                                  <option>B</option>
+                                  <option>AB</option>
+                                  <option>O</option>
+                                </select> 
+                            </div>
+                          </div>
+                      <div class="form-rowname4">
+                              <div class="col">
+                                 <label for="inputEmail4">ที่อยู่:</label><br>
+                                 <input style="width: 100px;" type="text" class="control" id="inputEmail4" placeholder="ที่อยู่">
+                              </div>
+                              <div class="col tab-10">
+                                  <label for="inputEmail4">ซอย:</label><br>
+                                  <input style="width: 150px;" type="text" class="control" id="inputEmail4" placeholder="ซอย">
+                             </div>
+                             <div class="col tab-10">
+                                  <label for="inputEmail4">หมู่ที่:</label><br>
+                                  <input style="width: 100px;" type="text" class="control" id="inputEmail4" placeholder="หมู่ที่">
+                             </div>
+                             <div class="col tab-10">
+                                <label for="inputEmail4">ตำบล:</label><br>
+                                <input type="text" class="control" id="inputEmail4" placeholder="ตำบล">
+                           </div>
+                         </div>
+                        
+                         <div class="form-rowname1">
+                            <div class="col">
+                                <label for="inputEmail4">อำเภอ:</label><br>
+                                <input type="text" class="control" id="inputEmail4" placeholder="อำเภอ">
+                             </div>
+                             <div class="col tab-10">
+                                 <label for="inputEmail4">จังหวัด:</label><br>
+                                 <input type="text" class="control" id="inputEmail4" placeholder="จังหวัด">
+                              </div>
+                         </div>
+                         <div>
+                          <div class="col">
+                              <label for="inputEmail4">โทรศัพท์:</label><br>
+                              <input type="text" class="control" id="inputEmail4" placeholder="+66">
+                        </div>
                       </div>
-                    </div>
-          </div>
-        </div>
-        <div class="form-put">
-            <input class="chack" type="checkbox" name="vehicle" value="Bike" >ยืนยันข้อมูลถูกต้อง<br>
-            <p> </p>
-            <input  type="submit" class="w3-bar-item w3-button w3-dark-grey" value="ตกลง">
-        </div>
-      </form>
-   
-     
-           
+                      <div >
+                          <div class="col">
+                              <label for="exampleFormControlTextarea1">ประวัติการรักษา:</label><br>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="clearfix right-2">
+                          <input class="chack" type="checkbox" name="vehicle" value="Bike" >ยืนยันข้อมูลถูกต้อง<br>
+                          <button type="submit" class="signupbtn ">ตกลง</button>
+                          <button type="button" class="cancelbtn ">ยกเลิก</button>
+                        </div>
+                    </form>
+              </div>
+            </div>
+         </div>
+      </section>
+      
+      <!-- FOOTER -->   
+      <footer>
+         <div class="line">
+            <div class="s-12 l-6">
+               <p>Copyright 2015, Vision Design - graphic zoo
+               </p>
+            </div>
+            <div class="s-12 l-6">
+               <p class="right">
+                  <a class="right" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding by Responsee Team</a>
+               </p>
+            </div>
+         </div>
+      </footer> 
+      <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-          
-    <script src="assets/javascripts/phon.js"></script>
+              reader.onload = function (e) {
+              $('#blah')
+                  .attr('src', e.target.result);
+              };
 
-</body>
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+      </script>
+   </body>
 </html>
