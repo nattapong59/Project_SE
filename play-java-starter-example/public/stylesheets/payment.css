@@ -3,12 +3,7 @@ body{
     width: 0 auto;
 
 }
-.container{
-    background-color: #fff;
-    padding: 64px;
-    width: 53%;
-    margin: 0 auto;
-}
+
 .form-group0{
 
     margin-top: 0%;
@@ -54,9 +49,10 @@ body{
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 100px;
+    padding: 25px;
     border: 1px solid #888;
-    width: 20%;
+    width: 250px;
+    height: 150px;
 }
 
 /* The Close Button */

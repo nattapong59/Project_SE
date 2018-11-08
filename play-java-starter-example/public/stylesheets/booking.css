@@ -24,6 +24,7 @@ input[type=radio]{
 }
 
 
+
 input[type=text], select {
     background-color: #f2f2f2;
     padding: 5px;
@@ -44,9 +45,11 @@ input:hover,input:focus{
     width: 80%;
     margin:0 auto;
 }
-
-.center {
-	text-align: center;
+.container-2{
+    background-color: #fff;
+    padding: 20px;
+    width: 95%;
+    margin:0 auto;
 }
 
 

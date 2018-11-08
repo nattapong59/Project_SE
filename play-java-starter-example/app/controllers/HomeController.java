@@ -30,12 +30,7 @@ public class HomeController extends Controller {
    public Result payment(){
        return ok(views.html.payment.render());
    }
-<<<<<<< HEAD
    public Result test(){
     return ok(views.html.test.render());
 }
-=======
-
-
->>>>>>> 397256e674fb22266e491126328fc923c404ace8
 }

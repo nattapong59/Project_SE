@@ -11,6 +11,19 @@
 	margin:0;	
 }
 /* Full-width input fields */
+.center {
+	text-align: center;
+}
+.font-table{
+  font-size:16px;
+  color: #000;
+  float: left;
+  font-weight: bold;
+}
+.box-check{
+  width: 60%;
+  padding: 20px;
+}
 .user-text{
   padding: 10px 20px;
   margin: 5px 18px;
@@ -22,7 +35,8 @@
 }
 
 input[type=text], input[type=password] {
-    padding: 10px 20px;
+    background-color: #f2f2f2;
+    padding: 10px 20px;   
     margin: 5px 18px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -32,7 +46,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.btm-login{
     background-color: rgb(0, 30, 34);
     color: white;
     padding: 14px 20px;
@@ -40,10 +54,10 @@ button {
     border: none;
     cursor: pointer;
     width: 90%;
-    font-size:20px;
+    font-size:18px;
     border-radius: 5px;
 }
-button:hover {
+.btm-login:hover {
     background-color: #2fcbe0;
 }
 
@@ -57,6 +71,10 @@ button:hover {
     width: 200px;
     height:200px;
     border-radius: 50%;
+}
+.avatar-2 {
+  width: 100px;
+  height: 66.6666666667px;
 }
 
 /* The Modal (background) */
@@ -192,10 +210,12 @@ td {border-right:1px solid #e0e0e0;}
   max-width:60em;
   padding:0 0.625em;
 }
+
 .size-1140 .line {
   margin:0 auto;
   max-width:71.25em;
   padding:0 0.625em;
+  
 }
 .size-960.align-content-left .line,.size-1140.align-content-left .line {margin-left:0;}
 form {line-height:1.4em;}

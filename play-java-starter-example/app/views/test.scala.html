@@ -1,130 +1,227 @@
 <!DOCTYPE html>
-<html>
-  <header>
-<title>Modal Popup Box</title>
-<style>
-*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>ระบบจัดการเจ้าหน้าที่</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="/assets/stylesheets/responsee.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.carousel.css">
+      <link rel="stylesheet" href="/assets/stylesheets/owl.theme.css">
+      <link rel="stylesheet" href="/assets/stylesheets/employee.css">
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+      <!-- CUSTOM STYLE -->  
+      <link rel="stylesheet" href="/assets/stylesheets/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="/assets/javascripts/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="/assets/javascripts/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="/assets/javascripts/responsee.js"></script>   
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 90%;
-    padding: 12px 20px;
-    margin: 8px 26px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-	font-size:16px;
-}
+    </head>
+   <body class="size-1140">
+      <header>
+            <nav>
+                    <div class="line">
+                       <div class="top-nav">              
+                          <div class="logo hide-l">
+                            <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                          </div>                  
+                          <p class="nav-text"><i class="fa fa-bars" style="font-size:23px;color:#fff;"></i></p>
+                          <ul class="s-12 l-2">
+                            <li class="logo hide-s hide-m">
+                               <a href="http://localhost:9000/"><strong>Hospital's</strong><br/>Reservation</a>
+                            </li>
+                         </ul>
+                          <div class="top-nav s-12 l-5">
+                             <ul class="top-ul chevron">
+                                <li><a href="http://localhost:9000/management_room" style="font-size: 17px"><i class="fa fa-hospital-o" style="font-size:21px; color:#fff;"></i> จัดการข้อมูลห้องพัก</a>
+                                </li>
+                                <li><a style="font-size: 17px"><i class="fa fa-drivers-license" style="font-size:21px; color:#fff;"></i> จัดการข้อมูลเจ้าหน้าที่</a>
+                                </li>
+                                <li><a href="http://localhost:9000/payment" style="font-size: 17px"><i class="fa fa-usd" style="font-size:21px; color:#fff;"></i> รับชำระเงิน</a>
+                                </li>
+                             </ul>
+      
+                             <ul class="top-ul chevron right">
+                              <li><a href="http://localhost:9000/" style="font-size: 17px;"><i class="fa fa-user-md " style="font-size:21px; color:#fff;"></i> ออกจากระบบ</a>
+                              </li>
+                           </ul> 
+      
+      
+                          </div>
+      
+                       </div>
+                    </div>
+                 </nav>
+      </header>
+      
+      <section>
+         <div id="head">
+            <div class="line">
+              <div class="container">
+                  <a class="center" style="font-size: 26px;">ข้อมูลผู้เจ้าหน้าที่</a>
+                  <br>
+                <form>
+                    <div>
+                        <div class="img">
+                            <img  id="blah" src="/assets/images/user_photo.jpg" alt="your image" ><br>
+                            <input  type='file' onchange="readURL(this);" />
+                        </div>
+                      <div>
+                        <label for="id_employee">รหัสเจ้าหน้าที่ : </label>
+                        <input class="box-only" type="text" name="id_employee" id="id_employee">
+                      </div>
+                    </div>
+                      <div>
+                        <label for="password">รหัสผ่าน:</label>
+                        <input  style="width: 220px;padding: 4px" type="password" id="password"
+                              minlength="8" required
+                              placeholder="ความยาวอย่างน้อย 8 ตัว" />
+                      </div>
+                      <div>
+                        <label for="password">ยืนยันรหัสผ่าน:</label>
+                        <input style="width: 220px;padding: 4px" type="password" id="password"
+                              minlength="8" required/>
+                      </div>
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 26px;
-    border: none;
-    cursor: pointer;
-    width: 90%;
-	font-size:20px;
-}
-button:hover {
-    opacity: 0.8;
-}
+                      <div >
+                        <label for="first_name">ชื่อ-สกุล:</label><br>
+                        <input  class="box-double" type="text" id="first_name" placeholder="ชื่อ">
+                        <input  class="box-double" type="text" id="last_name" placeholder="นามสกุล">
+                      </div>
+                      <div>
+                        <label>เลขบัตรประชาชน:</label><br>
+                        <input class="box-only"  type="text" name="id_number" id="id_number" placeholder="เลขบัตรประชาชน">
+                      </div>
+                    
 
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-.avatar {
-    width: 200px;
-	height:200px;
-    border-radius: 50%;
-}
+                      <div class="form-rowname1">
+                        <div class="col">
+                          <label for="inlineRadio1">เพศ:</label><br> 
+                          <input style="margin-left: 20px;" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"><a style="font-size: 16px;"> :ชาย</a><br>
+                          <input style="margin-left: 20px;" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"><a style="font-size: 16px;"> :หญิง</a>
+                        </div>
 
-/* The Modal (background) */
-.modal {
-	display:none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
+                        <div class="col" style="margin-left: 50px">
+                          <label for="dateofbirth">วันเดือนปีเกิด:</label><br>
+                          <input type="date" name="dateofbirth" id="dateofbirth">  
+                        </div>
+                        <div class="col tab-10">
+                            <label for="position">ตำแหน่ง:</label><br>
+                            <input type="text"  id="position" placeholder="ตำแหน่ง">
+                         </div>
+                        <div class="col tab-10-1">
+                             <label for="department">แผนก:</label><br>
+                             <input type="text"  id="department" placeholder="แผนก">
+                        </div>
+                      </div>
+                  <div class="form-rowname4">
+                          <div class="col">
+                             <label for="house_number">ที่อยู่:</label><br>
+                             <input style="width: 100px;" type="text" class="control" id="house_number" placeholder="ที่อยู่">
+                          </div>
+                          <div class="col tab-10">
+                              <label for="alley">ซอย:</label><br>
+                              <input style="width: 150px;" type="text" class="control" id="alley" placeholder="ซอย">
+                         </div>
+                         <div class="col tab-10">
+                              <label for="village_number">หมู่ที่:</label><br>
+                              <input style="width: 100px;" type="text" class="control" id="village_number" placeholder="หมู่ที่">
+                         </div>
+                         <div class="col tab-10">
+                            <label for="locality">ตำบล:</label><br>
+                            <input type="text" class="control" id="locality" placeholder="ตำบล">
+                       </div>
+                     </div>
+                    
+                     <div class="form-rowname1">
+                        <div class="col">
+                            <label for="district">อำเภอ:</label><br>
+                            <input type="text" class="control" id="district" placeholder="อำเภอ">
+                         </div>
+                         <div class="col tab-10">
+                             <label for="province">จังหวัด:</label><br>
+                             <input type="text" class="control" id="province" placeholder="จังหวัด">
+                          </div>
+                     </div>
+                     <div>
+                      <div class="col">
+                          <label for="inputEmail4">โทรศัพท์:</label><br>
+                          <input type="text" class="control" id="inputEmail4" placeholder="+66">
+                    </div>
+                  </div>
 
-/* Modal Content Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 4% auto 15% auto;
-    border: 1px solid #888;
-    width: 40%; 
-	padding-bottom: 30px;
-}
+                    <div class="clearfix right-2">
+                      <input class="chack" type="checkbox" name="vehicle" value="Bike" > ยืนยันข้อมูลถูกต้อง<br>
+                      <button type="submit" class="signupbtn ">ตกลง</button>
+                      <button type="button" class="cancelbtn ">ยกเลิก</button>
+                    </div>
+                </form>
+                <table style="margin:0 auto;" id="tableCustomers" >
+                    <tr>
+                        <th scope="col" style="width: 25%">รหัสเจ้าหน้าที่</th>
+                        <th scope="col" style="width: 25%">ชื่อ</th>
+                        <th scope="col" style="width: 25%">นามสกุล</th>
+                        <th scope="col" style="width: 25%">ตำแหน่ง</th>
+                    </tr>
+                    <!-- for show member all employees -->
+                    <tr>
+                        <td id="cell1"></td>
+                        <td id="cell2"></td>
+                        <td id="cell3"></td>
+                        <td id="cell4"></td>
+                    </tr>
+                </table>
+      </section>
+      
+      <!-- FOOTER -->   
+      <footer>
+          <div class="line" >
+             <div class="s-12 l-6">
+                   <p ><a href="https://th.wikipedia.org/wiki/โรงพยาบาลมหาวิทยาลัยอุบลราชธานี"><i class="fas fa-hospital" style="font-size:21px; color:#fff;"></i> โรงพยาบาลมหาวิทยาลัยอุบลราชธานี</a></p>
+             </div>
+             <div class="s-12 l-6">
+                   <p class="right">
+                   <a class="right" href="http://www.cmp.ubu.ac.th/newweb/index.php" title="Responsee - lightweight responsive framework"><i class="fas fa-at" style="font-size:16px; color:#fff;"></i> วิทยาลัยแพทยศาสตร์และการสาธารณสุข มหาวิทยาลัยอุบลราชธานี</a></p>
+             </div>
+          </div>
+       </footer> 
+      <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-.close:hover,.close:focus {
-    color: red;
-    cursor: pointer;
-}
+              reader.onload = function (e) {
+              $('#blah')
+                  .attr('src', e.target.result);
+              };
 
-/* Add Zoom Animation */
-.animate {
-    animation: zoom 0.6s
-}
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+      </script>
 
-</style>
-</header>
-<body background="../background1.png">
+      <script>
+        //for identifier value on table show member 
+        document.getElementById("cell1").innerHTML = "59110440156"
+        document.getElementById("cell2").innerHTML = "ณัฐพงษ์"    
+        document.getElementById("cell3").innerHTML = "สมานพงษ์"    
+        document.getElementById("cell4").innerHTML = "programmer"        
+      </script>
+      
+      <script>
+          var table = document.getElementById('tableCustomers');
+          for(var i = 1; i < table.rows.length; i++)
+          {
+              table.rows[i].onclick = function()
+              {
+                   //rIndex = this.rowIndex;
+                   document.getElementById("id_employee").value = this.cells[0].innerHTML;
+              };
+          }
 
-<h1 style="text-align:center; font-size:50px; color:#000">Modal Popup Box Login Form</h1>
+   </script>
 
-<button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
-Open Popup</button>
-
-<div id="modal-wrapper" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-        
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
-      <img src="/assets/images/login.png" alt="Avatar" class="avatar">
-      <h1 style="text-align:center">Modal Popup Box</h1>
-    </div>
-
-    <div>
-      <input type="text" placeholder="Enter Username" name="uname">
-      <input type="password" placeholder="Enter Password" name="psw">        
-      <button type="submit">Login</button>
-      <input type="checkbox" style="margin:26px 30px;"> Remember me      
-      <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
-    </div>
-    
-  </form>
-  
-</div>
-
-<script>
-// If user clicks anywhere outside of the modal, Modal will close
-
-var modal = document.getElementById('modal-wrapper');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
+   </body>
 </html>

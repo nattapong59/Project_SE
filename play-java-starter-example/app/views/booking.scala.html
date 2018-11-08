@@ -68,7 +68,7 @@
           <div>
             <input class="user-text" style="width: 90%" type="" placeholder="Username" name="uname">
             <input style="width: 90%" type="password" placeholder="Password" name="psw">        
-            <button type="submit">เข้าสู่ระบบ</button>
+            <button type="submit" class="btm-login">เข้าสู่ระบบ</button>
             <input type="checkbox" style="margin-left: 20px;margin-top:10px;"> Remember me      
             <a href="#" style="text-decoration:none; float:right; margin-right:20px; margin-top:5px;color: blue">Forgot Password?</a>
           </div>
@@ -96,9 +96,9 @@
                   </div>
                   
                   <div >
-                      <label >สถานะการจองของผู้ป่วย</label><br>
-                      <input type="radio" name="booking_state" ><a style="font-size: 16px;"> ผู้ป่วยนอนโรงพยาบาลแล้ว</a><br>
-                      <input type="radio" name="booking_state" ><a style="font-size: 16px;"> จองล่วงหน้า</a>
+                      <label >สถานะของผู้ป่วย</label><br>
+                      <input type="radio" name="patient_state" ><a style="font-size: 16px;"> ผู้ป่วยนอนโรงพยาบาลแล้ว</a><br>
+                      <input type="radio" name="patient_state" ><a style="font-size: 16px;"> จองล่วงหน้า</a>
                   </div>
                   <br>
                   <div >
@@ -133,17 +133,9 @@
 
                   <div class="form-group">
                     <label>เบอร์โทรศัพท์</label><br> 
-                    <input class="box-only" type="text" placeholder="phone" name="booking_phone" id="booking_phone" aria-required="true">
+                    <input class="box-only" type="text" placeholder="เบอร์โทรศัพท์" name="booking_phone" id="booking_phone" aria-required="true">
                   </div>
-                  
-                  <label for="country">Country</label>
-                  <div>  
-                    <select class="box-only" id="country" name="country">
-                      <option value="australia">Australia</option>
-                      <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
-                    </select>
-                  </div>
+
                   <div class="clearfix right-2">
                     <button type="submit" class="signupbtn ">ยืนยันการจอง</button>
                     <button type="button" class="cancelbtn ">ยกเลิก</button>
@@ -155,18 +147,16 @@
       </section>
       <!-- FOOTER -->   
       <footer>
-         <div class="line">
-            <div class="s-12 l-6">
-               <p>Copyright 2015, Vision Design - graphic zoo
-               </p>
-            </div>
-            <div class="s-12 l-6">
-               <p class="right">
-                  <a class="right" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding by Responsee Team</a>
-               </p>
-            </div>
-         </div>
-      </footer>
+          <div class="line" >
+             <div class="s-12 l-6">
+                   <p ><a href="https://th.wikipedia.org/wiki/โรงพยาบาลมหาวิทยาลัยอุบลราชธานี"><i class="fas fa-hospital" style="font-size:21px; color:#fff;"></i> โรงพยาบาลมหาวิทยาลัยอุบลราชธานี</a></p>
+             </div>
+             <div class="s-12 l-6">
+                   <p class="right">
+                   <a class="right" href="http://www.cmp.ubu.ac.th/newweb/index.php" title="Responsee - lightweight responsive framework"><i class="fas fa-at" style="font-size:16px; color:#fff;"></i> วิทยาลัยแพทยศาสตร์และการสาธารณสุข มหาวิทยาลัยอุบลราชธานี</a></p>
+             </div>
+          </div>
+       </footer> 
       <script>
         // If user clicks anywhere outside of the modal, Modal will close
         
